@@ -1,0 +1,212 @@
+<!doctype html>
+
+<html lang="el">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Παρουσίαση διαδραστικού συστήματος Jupress</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+   
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	
+	<!-- Pie chart Script -->
+	 <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['2013',     1601],
+          ['2014',      2938]
+         
+        ]);
+
+        var options = {
+          title: 'Πως το Jupress Επηρέασε τις Πωλήσεις ',
+		  titleTextStyle: {'color': '#000000', 'fontName': 'PT Serif', 'fontSize': 38},
+          is3D: true,
+		   legend: 'none',
+          pieSliceText: 'label',
+		  pieSliceTextStyle: {'color': '#fff', 'fontName': 'Lucida Console', 'fontSize': 48},
+		  colors: ['#3599E6','#EB0F11']
+		 }
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+
+
+<body class="impress-not-supported">
+
+
+<div class="fallback-message">
+    <p>Ο browser <b>σας δεν υποστηρίζει κάποιες λειτουργίες που απαιτούνται</b> από αυτή τη σελίδα , οπότε και βλέπετε μια απλούστερη έκδοση.</p>
+    <p>Για να δείτε τη σελίδα με όλες τις δυνατότητες παρακαλώ χρησιμοποιήστε τις τελευταίες εκδόσεις των <b>Chrome</b>, <b>Safari</b> η <b>Firefox</b> browsers.</p>
+</div>
+
+<div id="impress">
+
+	<script>
+var videoStep = document.getElementById("video-step");
+var video = document.getElementById("video");
+videoStep.addEventListener("impress:stepenter", function() {
+    video.play();
+}, false);
+videoStep.addEventListener("impress:stepleave", function() {
+    video.pause();
+}, false);
+</script>
+	
+	<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+	
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q>Σας παρουσιάζουμε ενα <b>νέο</b> διαδραστικό τρόπο ενημέρωσης και υπηρεσιών υγείας</q>
+		<div id="video-step">
+		<video id="video" width="100%" height="380px" loop="true" autoplay controls><source src="spot2.mp4" type="video/mp4"></video>
+		</div>
+    </div>
+	
+    <div class="step slide" data-x="0" data-y="-1500">
+        <i><p>Μετά την επιτυχημένη πορεία του JuPress στη Θεσσαλονίκη , η Jitech σε συνεργασία με τον ΠΡΟ.ΣΥ.Φ.ΛΑ, ξανασχεδιάζει το σύστημα μετατρέποντας το πλέον σε διαδραστικό. Για πρώτη φορα στην Ελλάδα καινοτομούμε εγκαθιστώντας το σύστημα σε 150 σημεία στο νομό Λάρισας, μετατρέποντας κάθε βιτρίνα σε μια ξεχωριστή εμπειρία για τον χρήστη. Το σύστημα υλοποιήθηκε με δική μας μελέτης και ανάπτυξης πρωτοπόρου-φιλικού προς το χρήστη λογισμικό και ειδικό διαδραστικό πληκτρολόγιο που βρίσκεται σε αναμονή παγκόσμιας πατέντας.
+Tην επόμενη φορα λοιπόν που θα ακούσετε μια φιλική φωνη να σας καλέι με το γνωστό "Καλως ορίσατε στο φαρμακείο μας",  σταθείτε και ανακαλύψτε τις δυνατότητες που σας παρέχει ένα πλήρως διαδραστικό σύστημα , σχεδιασμένο με κέντρο εσάς!</p></i>
+		
+    </div>
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">Η Jitech και ο ΠΡΟ.ΣΥ.Φ.ΛΑ σας παρουσιάζει το επιτυχημένο</span><br><br>
+        <h1>Jupress <sup>*</sup></h1>
+        <span class="footnote"><sup>*</sup> που έγινε διαδραστικό ! </span>
+    </div>
+
+   
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>Το <strong>Jupress</strong> 
+        έχει απλή αλλά χρηστική <strong>συνδεσμολογία</strong> και αρχιτεκτονική.</p>
+		 <img src="arch.png" alt="jupress architecture" > 
+    </div>
+
+    <div id="big" class="step" data-x="4500" data-y="2600" data-rotate="180" data-scale="2">
+        <p>Χρησιμοποιήσαμε μια <b>μεγάλη</b> <span class="thoughts">ιδέα</span></p>
+    </div>
+
+  
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p><b>και προχωρίσαμε στην αντίστοιχη υλοπoίηση</b><center><img src="screen2.png" alt="jupress overview" ></center> </p>
+		
+    </div>
+
+    
+    <div id="ing" class="step" data-x="4500" data-y="-650" data-rotate="270" data-scale="4">
+        <p><b class="positioning">Με όθόνες</b> <b class="rotating">Υψηλής Ανάλυσης (Full HD 1080p)</b> εξασφαλίσαμε ότι <b class="scaling">το περιεχόμενο </b> θα φαίνεται σωστά και καθαρά.</p>
+    </div>
+	
+	<div id="articles" class="step" data-x="4500" data-y="-2300" data-scale="3" data-rotate="-20">
+        <p><img src="articles.png" alt="articles-jupress" ></p>
+		
+		
+		</div>
+		
+		<div id="analytics" class="step" data-x="-4000" data-y="-1000" data-scale="3" data-rotate="-40">
+  
+		<q>Μετά την εγκατάσταση του Jupress στα φαρμακεία του ΠΡΟ.ΣΥ.Φ.ΛΑ παρατηρήθηκε ανοδική τάση των πωλήσεων :</q>
+		
+		</div>
+
+		
+		
+   <!--  <div id="imagination" class="step" data-x="-4000" data-y="3200" data-scale="3" data-rotate="-90">
+        <!--Div that will hold the pie chart-->
+    <!-- <div id="chart_div"style="margin-left:215px;"></div>
+	<div id ="info" style="font-size:22px;" ><p><center><i>Τα στοιχεία προέρχονται από τις πωλήσεις του ΠΡΟ.ΣΥ.Φ.ΛΑ και αφορούν 2 τυχαίους μήνες <br>των ετών 2013 & 2014 </i></center></p></div> 
+	
+    </div> --> 
+	
+	
+	
+	
+	
+	<div id="pie-chart" class="step" data-x="9200" data-y="-1000" data-scale="3" data-rotate="-90">
+	<div id="piechart_3d" style="width: 100%; height: 800px;"></div>
+	<div id ="info" style="font-size:18px;" ><p><center><i>Τα στοιχεία προέρχονται από τις πωλήσεις του ΠΡΟ.ΣΥ.Φ.ΛΑ και αφορούν 2 τυχαίους μήνες των ετών 2013 & 2014 </i></center></p></div>
+	</div>
+	
+	 <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <q>Και συνεχίζουμε.. </q>
+    </div>
+	
+	
+	<script>
+var audioStep = document.getElementById("audio-step");
+var audio = document.getElementById("audio");
+videoStep.addEventListener("impress:stepenter", function() {
+    audio.play();
+}, false);
+videoStep.addEventListener("impress:stepleave", function() {
+    audio.pause();
+}, false);
+</script>
+	
+    
+
+    
+    <div id="its-in-3d" class="step" data-x="9200" data-y="2300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+       
+		<div id="audio">
+		<p class="bubble speech"> Το Jupress μας ενημερώνει φωνητικά για τις εφημερείες - διανυκτερεύσεις Φαρμακείων του νομού<br></p>
+         <center><audio controls><source src="welcome.mp3" type="audio/mp3"></audio></center>
+		 </div>
+		<span class="its">καθώς και real time <b>navigation!</b></p>
+    </div> 
+	
+	
+	
+<div id="mobile" class="step" data-x="7500" data-y="4700" data-scale="3" data-rotate="-20">
+        <p><img src="mobile.png" alt="mobile-app-jupress" ></p>
+		<q>Mobile Apps (Android & IoS) για να έχετε το Jupress παντου !</q>
+		
+		</div>
+		
+		
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <center><p> <b class="rotating">Σας κινήσαμε το ενδιαφέρον; </b></p></center>
+        <center><q><a href="http://jitech.gr/#contact" target="_blank">Επικοινωνήστε σημερα με την <br>Jitech !</a></q></center>
+    </div>
+
+		
+
+   
+
+</div>
+
+
+<div class="hint">
+    <p>Χρησιμοποιήστε το πλήκτρο  <font size="140">Space</font> ή τα <font size="140"> "βελάκια" </font> για να πλοηγηθείτε ανάμεσα στις διαφάνειες!</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Αγγίξτε δεξιά η αριστερά την οθόνη του κινητού/tablet σας για να πλοηγηθείτε.</p>";
+}
+</script>
+
+
+<script src="js/impress.min.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
+
+
